@@ -1,0 +1,291 @@
+/***************************************/
+/** GERAL **/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+a{
+    font-family: "Roboto";
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+
+    transition: border-bottom 1s;
+}
+
+a:hover{
+    border-bottom: 1px solid snow;
+}
+
+h1{
+    font-family: "Karla";
+    font-size: 4rem;
+    /* text-transform: uppercase; */
+    letter-spacing: .3rem;
+}
+
+h2{
+    font-size: 3rem;
+    letter-spacing: 1rem;
+}
+
+span{
+    font-family: "Roboto";
+    text-transform: uppercase;
+}
+
+    /*Padrão do Design para todas as SECTIONS*/
+section{
+    padding: 40px 20px;
+}
+
+.container{
+    max-width: 1200px;
+}
+
+    /*flex - coluna/linha - posicão*/
+.f-l-c{
+    display: flex;
+    justify-content: center;
+}
+
+.f-l-sb{
+    display: flex;
+    justify-content: space-between;
+}
+
+.f-c-c{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.padding-extra{
+    padding: 100px 20px 0 20px;
+}
+
+.On{
+    display: block!important;
+}
+
+    /*Botçao UP*/
+    #Up{
+        display: none;
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+
+        animation: pulse infinite alternate 1.5s;
+    }
+
+    #Up img{
+        max-width: 64px;
+    }
+
+/***************************************/
+/** HEADER **/
+nav{
+    display: flex;
+    justify-content: flex-end;
+    gap: 3rem;
+    padding: 20px;
+
+    background-color: #333333;
+}
+
+nav a{
+    font-size: 1.3rem;
+    color: snow;
+}
+
+nav a:visited{
+    color: snow;
+}
+
+.logo{
+    max-width: 300px;
+}
+
+#Inicio section{
+    /* padding: 40px 20px; */
+    /* background: gold; */
+}
+
+.logo-box{
+    border-bottom: 1px solid #333;
+    box-shadow: 0 0 2px 0 #333;
+}
+
+/***************************************/
+/** MAIN **/
+main{
+    /* margin: 0 auto; */
+}
+
+.projeto-cards-container > section{
+    /* background: red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+#Projetos{
+    width: 100%;
+}
+
+#Projetos > section{
+    width: 100%;
+}
+
+.projeto-cards{
+    background: #333;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 3px 1px #333;
+    color: snow;
+    font-size: 1.5rem;
+}
+
+.projeto-cards > div{
+    height: 300px;
+}
+
+.projeto-cards > section{
+    padding: 20px;
+}
+
+.bg-p1{
+    background-image: url("../img/Aposentadoria.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;
+    transition: background-size 2.3s;
+}
+
+.bg-p2{
+    background-image: url("../img/Aposentadoria.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;
+    transition: background-size 2.3s;
+}
+
+.bg-p3{
+    background-image: url("../img/Aposentadoria.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;
+    transition: background-size 1.3s;
+}
+
+.bg-p1:hover,.bg-p2:hover,.bg-p3:hover {
+    background-size: 105% 105%;
+}
+
+
+
+/***************************************/
+/** FOOTER **/
+footer{
+    margin-top: 5rem;
+    background-color: #111;
+}
+
+footer h2, footer p, footer a{
+    color: snow;
+    text-align: center;
+}
+
+footer > section{
+    width: 100%;
+}
+
+#Info-box{
+    align-items: center;
+}
+
+#Info-box > div{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+#Info-box > div img{
+    max-width: 32px;
+}
+
+/***************************************/
+/** @MEDIAS **/
+@media screen and (max-width:1080px){
+    .projeto-cards-container > section{
+        display: flex;
+        gap: 32px;
+    }
+
+    .projeto-cards{
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width:800px){
+    .projeto-cards-container{
+        height: 650px;
+        overflow-y: auto;
+    }
+
+    .projeto-cards-container > section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+        
+    }
+
+    .projeto-cards{
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width:800px){
+    nav{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* padding: 0; */
+    }
+
+    nav > a:hover{
+        /* width: 100%; */
+        background: red;
+    }
+
+    #Info-box{
+        flex-direction: column;
+        gap: 3rem;
+        
+    }
+}
+
+/***************************************/
+/** ANIMATIONS **/
+@keyframes pulse {
+    from{
+        transform: scale(0.7);
+    }
+    
+    to{
+        transform: scale(1);
+    }
+}
